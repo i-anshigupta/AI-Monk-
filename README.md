@@ -1,53 +1,117 @@
-# AIMonk Nested Tags Tree Editor
+# 🌟 AI Monk - Professional Nested Tags Tree Editor
 
-A full-stack application built with FastAPI, React, and PostgreSQL (SQLite for local dev).
+A premium, full-stack application designed for creating, editing, and managing deeply nested hierarchical structures. Built with a focus on clean "Soft Indigo" aesthetics and a seamless user experience.
 
-## Features
-- **Recursive Tree Rendering**: View and edit deeply nested tags.
-- **Dynamic Node Updates**: Rename nodes, edit data, and add children.
-- **Smart Add Child**: Automatically converts data nodes to parent nodes when a child is added.
-- **Collapsible Nodes**: Expand or collapse any part of the tree.
-- **JSON Export**: Generate a clean JSON structure of the current tree state.
-- **Persistence**: Save and load multiple tree structures from the database.
+![GitHub last commit](https://img.shields.io/github/last-commit/i-anshigupta/AI-Monk-)
+![GitHub repo size](https://img.shields.io/github/repo-size/i-anshigupta/AI-Monk-)
+![Technology](https://img.shields.io/badge/Tech-React%20%7C%20FastAPI%20%7C%20SQLite-blue)
 
-## Tech Stack
-- **Frontend**: React, Vite, Tailwind CSS, Lucide React, Axios.
-- **Backend**: FastAPI, SQLAlchemy, Pydantic.
-- **Database**: SQLite (SQLAlchemy).
+---
 
-## Getting Started
+## ✨ Key Features
 
-### Prerequisites
-- Python 3.8+
-- Node.js 16+
+### 🌲 Intelligent Tree Management
+- **Recursive Rendering**: Infinite nesting support with a clean, indented visual hierarchy.
+- **Smart Node Conversion**: Automatically transforms "Data" nodes into "Parent" nodes when a child is added.
+- **Dynamic Editing**: In-place renaming of nodes with `Enter` to save and `Escape` to cancel.
+- **Collapsible Branches**: Easily manage large trees by expanding or collapsing any node.
 
-### Installation & Running
+### 📑 Advanced Data Export
+- **Live JSON Tab**: A dedicated side panel that shows your tree's structure in real-time.
+- **Syntax Highlighting**: Custom-built highlighter for the JSON tab with professional color-coding for keys, strings, and numbers.
+- **One-Click Copy**: Integrated copy-to-clipboard functionality with instant visual feedback.
 
-#### 1. Backend
+### 🎨 Premium "Soft Indigo" UI
+- **Cohesive Design**: A unified Indigo-based design system across both the editor and data panels.
+- **Responsive Layout**: Optimized for all screen sizes with a sticky sidebar for data preview.
+- **Micro-Animations**: Smooth transitions, hover effects, and active-click states for a high-end feel.
+
+---
+
+## 🛠️ Tech Stack
+
+| Layer | Technologies |
+| :--- | :--- |
+| **Frontend** | React 19, Vite, Tailwind CSS, Lucide React, Axios |
+| **Backend** | FastAPI (Python), Uvicorn, Python-Dotenv |
+| **Database** | SQLite, SQLAlchemy (ORM), Pydantic |
+| **DevOps** | Git, Environment Variables (.env), .gitignore |
+
+---
+
+## 🚀 Getting Started
+
+### 📋 Prerequisites
+- **Python**: 3.11+
+- **Node.js**: 18+
+- **npm**: 9+
+
+### 🛠️ Setup & Installation
+
+#### 1. Clone the Repository
+```bash
+git clone https://github.com/i-anshigupta/AI-Monk-.git
+cd AI-Monk-
+```
+
+#### 2. Backend Setup
 ```bash
 cd backend
 python -m venv venv
-# Windows
-.\venv\Scripts\activate
-# macOS/Linux
-source venv/bin/activate
-pip install fastapi uvicorn sqlalchemy pydantic
+.\venv\Scripts\activate  # Windows
+# source venv/bin/activate # macOS/Linux
+
+pip install -r requirements.txt
+cp .env.example .env  # Configure your environment
 python main.py
 ```
-The backend will run at `http://localhost:8000`.
+*Server runs at: `http://localhost:8000`*
 
-#### 2. Frontend
+#### 3. Frontend Setup
 ```bash
-cd frontend
+cd ../frontend
 npm install
+cp .env.example .env  # Ensure VITE_API_URL is set correctly
 npm run dev
 ```
-The frontend will run at `http://localhost:5173`.
+*App runs at: `http://localhost:5173`*
 
-## Usage
-1. Open the browser to `http://localhost:5173`.
-2. Click on any node name to rename it (press Enter to save).
-3. Modify the "Data" text field for leaf nodes.
-4. Click "Add Child" to add a new child node.
-5. Click "Export & Save" to save the tree to the database and view the JSON output in the right panel.
-6. Use "Add New Tree" to start a fresh tree structure.
+---
+
+## 📂 Project Structure
+
+```text
+AI-Monk-/
+├── backend/
+│   ├── main.py            # FastAPI application logic
+│   ├── requirements.txt   # Python dependencies
+│   ├── .env               # Backend environment variables
+│   └── trees.db           # SQLite database (ignored by git)
+├── frontend/
+│   ├── src/
+│   │   ├── components/    # Reusable React components (TagView)
+│   │   ├── App.jsx        # Main application layout & logic
+│   │   ├── index.css      # Global "Soft Indigo" design system
+│   │   └── main.jsx       # Entry point
+│   ├── .env               # Frontend environment variables
+│   └── package.json       # Node dependencies & scripts
+└── .gitignore             # Root git ignore rules
+```
+
+---
+
+## 🔄 Workflow
+
+1. **Initialize**: Start a new tree or load existing ones from the database.
+2. **Build**: Add children, rename nodes, and edit leaf-node data.
+3. **Persist**: Click **Export & Save** to sync the local state with the SQLite database.
+4. **Utilize**: View the beautified JSON in the right-hand **Exported Data Tab** and copy it for use in other systems.
+
+---
+
+## 🤝 Contributing
+Feel free to fork this project and submit pull requests. For major changes, please open an issue first to discuss what you would like to change.
+
+---
+
+**Developed with ❤️ by [Ansh Gupta](https://github.com/i-anshigupta)**
