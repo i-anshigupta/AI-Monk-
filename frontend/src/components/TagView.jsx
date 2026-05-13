@@ -32,9 +32,14 @@ const TagView = ({ node, path, onUpdate }) => {
 
   const handleAddChild = (e) => {
     e.stopPropagation();
+    const childrenCount = node.children ? node.children.length : 0;
+    const newChildName = node.name === 'root' 
+      ? `child${childrenCount + 1}` 
+      : `${node.name}-ch${childrenCount + 1}`;
+    
+    const newChild = { name: newChildName, data: 'Data' };
+    
     let newNode = { ...node };
-    const newChild = { name: 'New Child', data: 'Data' };
-
     if (newNode.data !== undefined) {
       delete newNode.data;
       newNode.children = [newChild];
