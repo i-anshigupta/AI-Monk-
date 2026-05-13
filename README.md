@@ -114,4 +114,4 @@ Feel free to fork this project and submit pull requests. For major changes, plea
 
 ---
 
-**Developed with ❤️ by [Ansh Gupta](https://github.com/i-anshigupta)**
+**Developed with ❤️ by [Anshika Gupta](https://github.com/i-anshigupta)**
