@@ -1,0 +1,40 @@
+@import "tailwindcss";
+:root {
+  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  background-color: #f5f7ff;
+  color: #1e1b4b;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: #f5f7ff;
+}
+
+.tree-node-container {
+  @apply flex flex-col mb-3;
+}
+
+.tree-node-header {
+  @apply flex items-center justify-between px-4 py-2.5 rounded-t-lg bg-indigo-50 text-indigo-900 font-semibold cursor-pointer transition-all hover:bg-indigo-100 border border-indigo-100 border-b-0 text-sm shadow-sm;
+}
+
+.tree-node-content {
+  @apply p-5 bg-white border border-indigo-100 rounded-b-lg shadow-sm;
+}
+
+.btn-primary {
+  @apply flex items-center gap-2 bg-indigo-600 text-white px-5 py-2.5 rounded-lg hover:bg-indigo-700 transition-all shadow-md active:scale-95 text-sm font-bold;
+}
+
+.btn-secondary {
+  @apply flex items-center justify-center bg-white text-indigo-700 border border-indigo-200 px-4 py-2 rounded-md hover:bg-indigo-50 transition-all shadow-sm text-xs font-bold;
+}
+
+.icon-btn {
+  @apply text-indigo-300 hover:text-indigo-600 transition-all rounded-full p-1.5 hover:bg-indigo-50;
+}
+
+input[type="text"] {
+  @apply px-4 py-2 text-sm border border-indigo-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:border-transparent text-indigo-900 bg-white w-72 shadow-sm transition-all placeholder:text-indigo-200;
+}
